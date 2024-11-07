@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px; 
+    background: #fff;
+    margin: 50px auto; 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left-side {
+    background: #004147;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.left-side h3 {
+    font-size: 18px;
+    font-weight: 700; 
+    color: #ffffff; 
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #0ccac4; 
+    margin: 10px 0 20px; 
+    width: 20%;
+}
+
+h2, h3 {
+    color: #004147;
+    font-weight: 500;
+    margin-bottom: 15px; 
+}
+
+.profiletext {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+.profiletext h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.profiletext .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.imgbx {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imgbx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info, .address, .skills, .languages {
+    margin-top: 30px;
+    width: 100%; 
+}
+
+.contact-info h3, .address h3, .skills h3, .languages h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.contact-info p, .address p, .skills ul li {
+    font-size: 14px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    width: 100%; 
+}
+
+.contact-info p i, .address p i, .skills ul li:before {
+    font-size: 14px;
+    color: #0ccac4;
+    margin-right: 8px;
+}
+
+.contact-info p strong, .address p strong {
+    color: #ffffff; 
+}
+
+.contact-info a {
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.skills ul, .achievements ul {
+    list-style-type: none;
+    padding-left: 0; 
+    line-height: 1.8;
+}
+
+.skills ul li, .achievements ul li {
+    padding-left: 5px;
+}
+
+.projects {
+    margin-bottom: 25px; 
+}
+
+.project-item {
+    margin-bottom: 15px; 
+}
+
+.project-item h4 {
+    font-size: 16px; 
+    font-weight: 600; 
+    color: #265e5c; 
+    margin-bottom: 8px; 
+}
+
+.project-item p {
+    font-size: 14px; 
+    margin-bottom: 10px; 
+}
+
+.right-side {
+    padding: 40px;
+}
+
+h2, h3 {
+    color: #004147;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px; 
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px; 
+    margin-top: 10px; 
+}
+
+.education, .work-experience, .professional-summary, .projects, .achievements {
+    margin-top: 25px; 
+}
+
+.education p, .work-experience p, .professional-summary p {
+    margin-bottom: 10px; 
+    line-height: 1.6; 
+}
+
+.work-experience {
+    margin-top: 25px; 
+}
+
+.work-experience h3 {
+    margin-bottom: 15px; 
+}
+
+.work-experience p {
+    margin-top: 15px; 
+    margin-bottom: 10px; 
+    line-height: 1.6; 
+}
+.toggle-button {
+    background-color: #73a4a9; 
+    color: #fff;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.toggle-button:hover {
+    background-color: #0ccac4; 
+    transform: translateY(-2px);
+}
+
+.toggle-button:active {
+    transform: translateY(1px);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; 
+        margin: 20px; 
+    }
+    
+    .left-side, .right-side {
+        padding: 20px; 
+    }
+    
+    h2 {
+        font-size: 20px; 
+    }
+    
+    h3 {
+        font-size: 18px; 
+    }
+    
+    h4 {
+        font-size: 16px; 
+    }
+    
+    .profiletext h1 {
+        font-size: 22px; 
+    }
+    
+    .profiletext .subtitle {
+        font-size: 14px; 
+    }
+    
+    .contact-info p, .address p, .skills ul li {
+        font-size: 12px; 
+    }
+    .toggle-button {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px 12px; /* Smaller padding for mobile */
+    }
+}
