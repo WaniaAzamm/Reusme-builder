@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerForge</title>
+    <link rel="stylesheet" href="resume.css" />
+    <link rel="icon" href="images.jpg" type="image/x-icon">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Make your Professional Resume </h1>
+    </header>
+
+    <main>
+      <section id="form-section">
+        <h2>Fill Out Your Resume</h2>
+        <form id="resumeForm">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contact">Contact Number:</label>
+              <input
+                type="text"
+                id="contact"
+                placeholder="Enter your contact number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" required />
+            </div>
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Choose a username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="profilePicture">Profile Picture:</label>
+              <input
+                type="file"
+                id="profilePicture"
+                accept="image/*"
+                required
+              />
+            </div>
+          </fieldset>
+
+
+          <fieldset>
+            <legend>Professional Summary</legend>
+            <div id="Professional-summary-container">
+              <div class="form-group-inline">
+                <h3><label for="professionalSummary">your Professional Summary:</label></h3>
+                <input
+                  type="text"
+                  id="professionalSummary"
+                  placeholder="Write your Professional Summary"
+                  required
+                >
+              </div>
+            </div>
+          </fieldset>
+          
+
+          <fieldset>
+            <legend>Education</legend>
+            <div id="education-container">
+              <div class="form-group-inline">
+                <h3>
+                  <label for="education"
+                    >Your Education and School / Universty:</label
+                  >
+                </h3>
+                <input
+                  type="text"
+                  id="education"
+                  placeholder="Your Education and School / Universty "
+                  required
+                />
+              </div>
+              <div class="form-group-inline">
+                <h3><label for="educationStart">Start Date:</label></h3>
+                <input type="date" id="educationStart" required />
+              </div>
+              <div class="form-group-inline">
+                <h3><label for="educationEnd">End Date:</label></h3>
+                <input type="date" id="educationEnd" required />
+              </div>
+            </div>
+            <button type="button" id="add-education-btn">
+              Add more Educations
+            </button>
+          </fieldset>
+
+          <fieldset>
+            <legend>Work Experience</legend>
+            <div id="work-experience-container">
+              <div class="form-group-inline">
+                <h3><label for="jobTitle">Job Title:</label></h3>
+                <input
+                  type="text"
+                  id="jobTitle"
+                  placeholder="Your Job Title"
+                  required
+                />
+              </div>
+              <div class="form-group-inline">
+                <h3><label for="company">Company:</label></h3>
+                <input
+                  type="text"
+                  id="company"
+                  placeholder="Company"
+                  required
+                />
+              </div>
+              <div class="form-group-inline">
+                <h3><label for="workStart">Start Date:</label></h3>
+                <input type="date" id="workStart" required />
+              </div>
+              <div class="form-group-inline">
+                <h3><label for="workEnd">End Date:</label></h3>
+                <input type="date" id="workEnd" required />
+              </div>
+            </div>
+            <button type="button" id="add-work-btn">
+              Add More Work Experiences
+            </button>
+          </fieldset>
+
+          <fieldset>
+            <legend>Skills</legend>
+            <div id="skills-container">
+              <div class="form-group-inline">
+                <h3><label for="skill">your Skills:</label></h3>
+                <input
+                  type="text"
+                  id="skill"
+                  placeholder="Your Skill"
+                  required
+                />
+              </div>
+            </div>
+            <button type="button" id="add-skill-btn">Add more Skills</button>
+          </fieldset>
+         
+
+          <fieldset>
+            <legend>Languages</legend>
+            <div id="languages-container">
+              <div class="form-group-inline">
+                <h3><label for="language">Known Languages:</label></h3>
+                <input
+                  type="text"
+                  id="language"
+                  placeholder="Your Language"
+                  required
+                />
+              </div>
+            </div>
+            <button type="button" id="add-language-btn">
+              Add more Languages
+            </button>
+          </fieldset>
+
+          <button type="submit" class="generate-resume-btn">
+            Generate Resume
+          </button>
+        </form>
+      </section>
+      <h2 id="start-h">Generated Resume</h2>
+      <section id="resume-section">
+        <div id="resume"></div>
+      </section>
+      <div id="resume-actions">
+        <button id="downloadBtn" class="download-btn" style="display: none">
+          Download PDF
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Developed by Wania Azam</p>
+      <p>&copy; 2024 Wania Azam. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  </body>
+</html>
